@@ -80,6 +80,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .permitAll()
                 .and()
+                .antMatcher("/swagger-ui.html/**")
                 // [로그아웃 기능]
                 .logout()
                 // 로그아웃 요청 처리 URL
